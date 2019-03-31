@@ -67,7 +67,7 @@ $(document).ready(function () {
     $("#reset").hide();
     //click start button to start game
     $("#start").on("click", function () {
-            $("#start").hide();
+            $(this).hide();
             displayQuestion();
             runTimer();
             for(var i = 0; i < options.length; i++) {
@@ -153,7 +153,7 @@ $(document).ready(function () {
     
         var hidpic = setTimeout(function() {
             $("#answerblock").empty();
-            timer= 20;
+            timer= 10;
     
         //run the score screen if all questions answered
         if ((wrongCount + correctCount + unanswerCount) === qCount) {
